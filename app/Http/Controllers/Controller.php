@@ -13,7 +13,7 @@ class Controller extends BaseController
     protected function getNews(): array
     {
         return [
-            'sports' => [
+            'Спорт' => [
                 [
                     'title' => 'dui ut ornare lectus',
                     'description' => 'vitae sapien pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas sed tempus urna et pharetra pharetra massa massa ultricies mi',
@@ -34,8 +34,9 @@ class Controller extends BaseController
                     'description' => 'ut eu sem integer vitae justo eget magna fermentum iaculis eu non diam phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor at',
                     'short_description' => 'commodo sed egestas egestas fringilla phasellus faucibus scelerisque'
                 ]
+
             ],
-            'video games' => [
+            'Игры' => [
                 [
                     'title' => 'ultricies lacus sed turpis',
                     'description' => 'ornare massa eget egestas purus viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor eu augue ut lectus arcu bibendum at varius vel pharetra',
@@ -57,7 +58,7 @@ class Controller extends BaseController
                     'short_description' => 'vitae tortor condimentum lacinia quis vel eros donec'
                 ]
             ],
-            'movies' => [
+            'Фильмы' => [
                 [
                     'title' => 'justo eget magna fermentum',
                     'description' => 'orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum consequat nisl vel pretium',
@@ -79,7 +80,7 @@ class Controller extends BaseController
                     'short_description' => 'maecenas pharetra convallis posuere morbi leo urna molestie'
                 ]
             ],
-            'tech' => [
+            'Наука' => [
                 [
                     'title' => 'eu feugiat pretium nibh',
                     'description' => 'arcu dictum varius duis at consectetur lorem donec massa sapien faucibus et molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt',
@@ -101,7 +102,7 @@ class Controller extends BaseController
                     'short_description' => 'enim lobortis scelerisque fermentum dui faucibus in ornare'
                 ]
             ],
-            'memes' => [
+            'Культура' => [
                 [
                     'title' => 'commodo odio aenean sed',
                     'description' => 'dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas integer eget aliquet nibh praesent tristique',
