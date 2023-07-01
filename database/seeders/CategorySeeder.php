@@ -22,7 +22,7 @@ class CategorySeeder extends Seeder
         $response = [];
         for ($i=0; $i < 10; $i++) {
             $response[] = [
-                'title' => 'Category# ' . $i,
+                'title' => 'Категория# ' . $i,
                 'description' => fake()->text(100),
                 'created_at' => now(),
                 'updated_at' => now(),

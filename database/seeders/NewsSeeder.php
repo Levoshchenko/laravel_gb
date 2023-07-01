@@ -23,7 +23,7 @@ class NewsSeeder extends Seeder
         $response = [];
         for ($i=0; $i < 10; $i++) {
             $response[] = [
-                'title' => 'News# ' . $i,
+                'title' => 'Новости# ' . $i,
                 'author' => fake()->userName(),
                 'image' => fake()->imageUrl(),
                 'status' => NewsStatus::ACTIVE->value,

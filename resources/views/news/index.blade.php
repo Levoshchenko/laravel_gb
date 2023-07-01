@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('title')| {{ ucfirst($categoryName) }} @stop
 @section('content')
-<h1 class="display-5 link-body-emphasis mb-1">Articles | {{ ucfirst($categoryName) }}</h1>
+<h1 class="display-5 link-body-emphasis mb-1">Статьи | {{ ucfirst($categoryName) }}</h1>
 @foreach($articles as $articleIdx => $article)
     <div class="col-md-6">
         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
@@ -10,7 +10,7 @@
                 <h3 class="mb-0">{{ $article['title'] }}</h3>
                 <p class="card-text mb-auto">{{ $article['short_description'] }}</p>
                 <a href="/categories/{{ $categoryName }}/{{ $articleIdx }}" class="icon-link gap-1 icon-link-hover stretched-link">
-                        Continue reading
+                        Продолжить чтение
                     <svg class="bi"><use xlink:href="#chevron-right"/></svg>
                 </a>
             </div>

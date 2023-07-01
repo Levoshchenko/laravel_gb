@@ -14,12 +14,12 @@
         <table class="table table-bordered">
             <tr>
                 <th>#ID</th>
-                <th>Categories</th>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Status</th>
-                <th>Date created</th>
-                <th>Actions</th>
+                <th>Категории</th>
+                <th>Название</th>
+                <th>Автор</th>
+                <th>Статус</th>
+                <th>Дата создания</th>
+                <th>Действия</th>
             </tr>
             @foreach($newsList as $news)
                 <tr>
@@ -29,7 +29,7 @@
                     <td>{{ $news->author }}</td>
                     <th>{{ $news->status }}</th>
                     <td>{{ $news->created_at }}</td>
-                    <td><a href="#">Edit</a>&nbsp; <a href="javascript:;" style="color:red">Delete</a> </td>
+                    <td><a href="#">Редактировать</a>&nbsp; <a href="javascript:;" style="color:red">Удалить</a> </td>
                 </tr>
             @endforeach
         </table>

@@ -1,26 +1,26 @@
 @extends('layouts.main')
-@section('title')| Create article @stop
+@section('title')| Создать статью @stop
 @section('content')
-<h1>Create article</h1>
+<h1>Создать статью</h1>
 <form action="/create">
-    <label>Title
+    <label>Название
         <input type="text">
     </label><br>
-    <label>Description
+    <label>Описание
         <textarea></textarea>
     </label><br>
-    <label>Short description
+    <label>Краткое описание
         <textarea></textarea>
     </label><br>
-    <label>Category
+    <label>Категории
         <select>
-            <option>Sports</option>
-            <option>Video games</option>
-            <option>Movies</option>
-            <option>Tech</option>
-            <option>Memes</option>
+            <option>Спорт</option>
+            <option>Игры</option>
+            <option>Фильмы</option>
+            <option>Наука</option>
+            <option>Культура</option>
         </select>
     </label><br>
-    <input type="submit" value="Create">
+    <input type="submit" value="Создать">
 </form>
 @endsection
