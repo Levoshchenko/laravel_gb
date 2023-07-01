@@ -2,10 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Queries\CategoriesQueryBuilder;
+use App\Queries\NewsQueryBuilder;
+use App\Queries\QueryBuilder;
 use Illuminate\Contracts\View\View;
 
-class NewsController extends Controller
+final class NewsController extends Controller
 {
+    protected QueryBuilder $categoryQueryBuilder ;
+    protected QueryBuilder $newsQueryBuilder;
+
+    public function __construct (
+        CategoriesQueryBuilder $categoryQueryBuilder,
+        NewsQueryBuilder $newsQueryBuilder
+    ) {
+        $this->categoryQueryBuilder = $categoryQueryBuilder;
+        $this->newsQueryBuilder = $newsQueryBuilder;
+    }
     public function index(string $categoryName): View
     {
         return view('news.index', [

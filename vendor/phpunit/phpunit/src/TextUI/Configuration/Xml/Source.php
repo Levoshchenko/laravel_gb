@@ -39,6 +39,10 @@ final class Source
         $this->restrictWarnings     = $restrictWarnings;
     }
 
+    public static function query()
+    {
+    }
+
     public function hasNonEmptyListOfFiles(): bool
     {
         return count($this->directories) > 0 || count($this->files) > 0;

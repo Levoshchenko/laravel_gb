@@ -1,15 +1,18 @@
 <?php
 
-declare(strict_types=1);
 
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+
+class CategoryHasNews extends Model
 {
     use HasFactory;
 
-    protected $table = 'categories';
+    protected $table = 'category_has_news';
+    protected $guarded = [];
+
+
 }
