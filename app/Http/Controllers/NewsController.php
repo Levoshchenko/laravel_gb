@@ -18,6 +18,7 @@ final class NewsController extends Controller
     ) {
         $this->categoryQueryBuilder = $categoryQueryBuilder;
         $this->newsQueryBuilder = $newsQueryBuilder;
+        $this->middleware('auth');
     }
     public function index(string $categoryName): View
     {

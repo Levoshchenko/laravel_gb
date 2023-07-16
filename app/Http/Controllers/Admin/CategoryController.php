@@ -9,7 +9,6 @@ use App\Http\Requests\Category\Store;
 use App\Http\Requests\Category\Update;
 use App\Models\Category;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 
 class CategoryController extends Controller
