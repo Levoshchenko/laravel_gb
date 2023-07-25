@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\DataSourceController;
 use App\Http\Controllers\Admin\IndexController as AdminController;
 use App\Http\Controllers\AboutPageController;
 use App\Http\Controllers\CategoriesController;
@@ -31,9 +33,9 @@ Route::group(['middleware' => 'auth'], static function () {
     ], static function () {
         Route::get('/', AdminController::class)
             ->name('index');
-        Route::resource('/categories', AdminCategoryController::class);
+        Route::resource('/categories', CategoryController::class);
         Route::resource('/news', AdminNewsController::class);
-        Route::resource('/data-sources', AdminDataSourceController::class);
+        Route::resource('/data-sources', DataSourceController::class);
         Route::resource('/users', AdminProfileController::class);
     });
 });
@@ -65,3 +67,30 @@ Route::get('/sessions', function () {
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\NewsController::class, 'index'])->name('home');
+
+Route::group(
+    [
+        "prefix" => "admin",
+        "namespace" => "Admin",
+        "as" => 'admin.',
+        "middleware" => ["auth", "is.admin"]
+    ],
+    function (){
+        Route::get('/parser', [
+            'user' => 'ParserController@index',
+            'as' => 'parser'
+        ]);
+        Route::match(['post', 'get'], '/profile', [
+            'user' => 'ProfileController@update',
+            'as' => 'updateProfile'
+        ]);
+    }
+);
+Route::get('/auth/facebook', [
+    'user' => 'LoginController@loginFacebook',
+    'as' => 'facebookLogin'
+]);
+Route::get('/auth/vk/response', [
+    'user' => 'LoginController@responseFacebook',
+    'as' => 'facebookResponse'
+]);

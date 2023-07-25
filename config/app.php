@@ -164,6 +164,9 @@ return [
          * Application Service Providers...
          */
         Barryvdh\Debugbar\ServiceProvider::class,
+        Orchestra\Parser\XmlServiceProvider::class,
+        SocialiteProviders\Manager\ServiceProvider::class,
+        Illuminate\Auth\AuthServiceProvider::class,
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
@@ -184,6 +187,8 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         'Debugger' => Barryvdh\Debugbar\Facade::class,
+        'XmlParser' => Orchestra\Parser\Xml\Facade::class,
+        'Auth' => Illuminate\Support\Facades\Auth::class,
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
